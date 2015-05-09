@@ -4,11 +4,11 @@
 
 import json
 
+
 def github_api_response():
     with open('github.json') as f:
         github = json.loads(f.read())
     return github
-
 
 def print_user_repository_names():
 
@@ -20,9 +20,8 @@ def print_user_repository_names():
     for repo in repos:
         # I don't think I have these keys right
         # Also I'd like to print it on one line.
-        print repo['repo_name']
-        print repo['repo_description']
+        print repo['name'] + ': ' + repo['description']
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     print_user_repository_names()

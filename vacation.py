@@ -33,6 +33,8 @@ def best_vacation_spot(weather_type):
     # rain = New York
     # sun = Mexico
 
+
+
     return "Stay at home"
 
 
@@ -47,7 +49,7 @@ def get_my_vacation():
     season = raw_input("What season do you want to travel? ")
 
     # check if season is in the seasons list
-    if not seasons:
+    if season not in seasons:
         print "Sorry, that isn't a season. I can't help you."
 
     # look up the weather type for that season

@@ -17,26 +17,26 @@ with open('descriptors.txt') as f:
 
 
 def generate_costume():
-
+    import random
     # pick something random from the nouns and adjectives list
 
-    noun = "lazy"
-    adj = "person"
+    noun = random.choice(nouns)
+    adj = random.choice(adjectives)
 
     return (noun, adj)
 
 
 while True:
-    (noun, adjective) = generate_costume()
+    (noun, adj) = generate_costume()
 
-    print "You go dressed as a {} {} to the party."
+    print "You go dressed as a {} {} to the party.".format(adj, noun)
 
     happy = raw_input("Are you happy with this choice? ")
 
     # Check if the user typed something like 'yes' or 'y' and
     # quit the program if they are happy.
-    if happy == True:
+
+    if happy == 'y' or happy == 'yes':
         exit()
     else:
         print "OK, I will choose another costume. Hold on..."
-        print
